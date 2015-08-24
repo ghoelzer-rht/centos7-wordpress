@@ -7,6 +7,8 @@
 FROM centos:centos7
 MAINTAINER The CentOS Project <cloud-ops@centos.org>
 
+USER root
+
 RUN yum -y update; yum clean all
 RUN yum -y install epel-release; yum clean all
 RUN yum -y install httpd php php-mysql php-gd pwgen supervisor bash-completion openssh-server psmisc tar; yum clean all
@@ -25,5 +27,4 @@ RUN mkdir /var/run/sshd
 EXPOSE 80
 EXPOSE 22
 
-USER root
 CMD ["/start.sh"]
