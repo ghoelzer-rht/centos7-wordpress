@@ -25,6 +25,4 @@ RUN mkdir /var/run/sshd
 EXPOSE 80
 EXPOSE 22
 
-USER root
-
 CMD ["/bin/bash", "/start.sh"]
