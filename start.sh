@@ -64,7 +64,7 @@ sleep 10
 }
 
 __run_supervisor() {
-supervisord -n
+supervisord -n -c /etc/supervisord.conf
 }
 
 # Call all functions
