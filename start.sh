@@ -67,9 +67,6 @@ __run_supervisor() {
 supervisord -n -c /etc/supervisord.conf
 }
 
-# switch to root
-echo ***switching to root user
-sudo su -
 # Call all functions
 __check
 __create_user
